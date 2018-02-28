@@ -17,6 +17,13 @@ app.get('/ak', function(req, res) {
    res.send('My profile page will be shown');
 });
 
+var counter = 0;
+
+app.get('/counter', function(req, res) {
+    counter = counter + 1;
+    res.send(counter.toString());
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
