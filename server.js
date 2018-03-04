@@ -67,7 +67,7 @@ app.get('/test', function(req, res) {
         }
         else
         {
-            res.send(JSON.stringify(result));
+            res.send(JSON.stringify(result.row));
         }
     });
 });
