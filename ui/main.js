@@ -13,8 +13,7 @@ img.onclick = function () {
    //   var interval = setInterval(moveRight, 100);
 };
 
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function() {
 /*    var names = ['name1', 'name2', 'name3'];
@@ -42,5 +41,7 @@ submit.onclick = function() {
         }
     }
 };
-request.oprn('GET','http://ajithravikumar08.imad.hasura-app.io/submit?name=' +name, true);
+var nameInput = document.getElementById('name');
+var namme = nameInput.value;
+request.oprn('GET','http://ajithravikumar08.imad.hasura-app.io/submit?name=' +namme, true);
 request.send(null);
