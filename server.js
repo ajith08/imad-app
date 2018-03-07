@@ -42,7 +42,7 @@ app.get('/hash/:input', function(req, res) {
 app.post('/create', function(req, res) {
     var username = req.body.username;
     var password = req.body.password;
-   var salt = cryto.getRandombytes(128).toString('hex');
+   var salt = cryto.randombytes(128).toString('hex');
    var dbstring = hash(password, salt);
    pool.query('INSERT INTO "users" (username, password) VALUES ($1, $2)', [username, dbstring],  function(err, result) {
         if(err) {
