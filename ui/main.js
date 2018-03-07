@@ -43,5 +43,5 @@ submit.onclick = function() {
 };
 var nameInput = document.getElementById('name');
 var namme = nameInput.value;
-request.oprn('GET','http://ajithravikumar08.imad.hasura-app.io/submit?name=' +namme, true);
+request.open('GET','http://ajithravikumar08.imad.hasura-app.io/submit?name=' +namme, true);
 request.send(null);
